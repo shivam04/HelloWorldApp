@@ -10,7 +10,7 @@ import {
   SafeAreaView,
 } from 'react-native-safe-area-context';
 import MyText from './components/MyText/MyText';
-import { Text, View } from 'react-native';
+import { Alert, Text, View } from 'react-native';
 import style from './style';
 
 function App() {
@@ -22,7 +22,14 @@ function App() {
           <Text style={style.headerTitle}>Home</Text>
         </View>
         <View>
-          <MyText title={'Shivam'} fontSize={50} styles={{ color: 'green' }} />
+          <MyText
+            title={'Shivam'}
+            fontSize={50}
+            styles={{ color: 'green' }}
+            onPress={() => {
+              Alert.alert('You clicked on Text');
+            }}
+          />
           <MyText title={'My Content Goes Here'} />
           <MyText />
         </View>
