@@ -9,33 +9,20 @@ import {
   SafeAreaProvider,
   SafeAreaView,
 } from 'react-native-safe-area-context';
-import MyText from './components/MyText/MyText';
-import { Alert, Text, View } from 'react-native';
-import style from './style';
+import { Button, Text } from 'react-native';
+import { useCounter } from './hooks/useCounter';
 
 function App() {
+
+  const { count, increment, decrement, reset } = useCounter();
 
   return (
     <SafeAreaProvider>
       <SafeAreaView>
-        <View style={style.header}>
-          <Text style={style.headerTitle}>Home</Text>
-        </View>
-        <View>
-          <MyText
-            title={'Shivam'}
-            fontSize={50}
-            styles={{ color: 'green' }}
-            onPress={() => {
-              Alert.alert('You clicked on Text');
-            }}
-          />
-          <MyText title={'My Content Goes Here'} />
-          <MyText />
-        </View>
-        <View style={style.footer}>
-          <Text style={style.footerText}>Copyright 2026</Text>
-        </View>
+        <Text>Count {count}</Text>
+        <Button title='+' onPress={increment} />
+        <Button title='-' onPress={decrement} />
+        <Button title='Reset' onPress={reset} />
       </SafeAreaView>
     </SafeAreaProvider>
   );
