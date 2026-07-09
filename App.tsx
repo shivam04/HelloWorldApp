@@ -16,7 +16,16 @@ function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView>
-        <Text>Hello World!</Text>
+        <Text style={{
+          fontSize: 40,
+          color: '#ff0000',
+          fontFamily: 'Arial',
+          fontStyle: 'italic',
+          fontWeight: 900,
+          backgroundColor: 'green',
+          lineHeight: 70,
+          textAlign: 'center'
+        }}>Hello World!</Text>
       </SafeAreaView>
     </SafeAreaProvider>
   );
