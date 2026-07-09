@@ -22,8 +22,8 @@ function App() {
           <Text style={style.headerTitle}>Home</Text>
         </View>
         <View>
-          <MyText />
-          <MyText />
+          <MyText title={'Shivam'} fontSize={50} styles={{ color: 'green' }} />
+          <MyText title={'My Content Goes Here'} />
           <MyText />
         </View>
         <View style={style.footer}>
