@@ -1,8 +1,9 @@
 import { Text } from "react-native"
+import style from "./Style";
 
 const MyText = () => {
     return (
-        <Text>Hello World 2</Text>
+        <Text style={[style.text, style.fontStyles]}>Hello World 2</Text>
     )
 }
 
