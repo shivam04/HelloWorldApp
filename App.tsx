@@ -16,7 +16,20 @@ function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView>
-        <Text>Hello World!</Text>
+        <Text style={{
+          // borderLeftWidth: 10,
+          // borderWidth: 5,
+          // borderTopWidth: 10,
+          // borderBottomWidth: 8,
+          borderColor: 'red',
+          //borderRadius: 50
+          // borderTopLeftRadius: 50,
+          // borderBottomLeftRadius: 50,
+          // borderTopRightRadius: 50,
+          // borderBottomRightRadius: 50
+          borderWidth: 1,
+          borderStyle: 'dashed'
+        }}>Hello World!</Text>
       </SafeAreaView>
     </SafeAreaProvider>
   );
