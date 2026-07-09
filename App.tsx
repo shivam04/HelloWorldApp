@@ -5,7 +5,7 @@
  * @format
  */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Text } from 'react-native';
 import {
   SafeAreaProvider,
@@ -16,6 +16,18 @@ function App() {
 
   const [content, handleContent] = useState('Hello World');
   const [howManyTimesDidYouClickIt, updateClickCount] = useState(0);
+
+  useEffect(() => {
+    console.log("Screen is rendered")
+  }, []);
+
+  useEffect(() => {
+    console.log("Content haas been updated")
+  }, [content]);
+
+  useEffect(() => {
+    console.log("Click Count has been updated")
+  }, [howManyTimesDidYouClickIt]);
 
   return (
     <SafeAreaProvider>
